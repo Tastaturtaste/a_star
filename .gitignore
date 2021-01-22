@@ -1,14 +1,9 @@
 **/*.vs
 **/__*__/
-**/Solutions/*.png
 **/build/
-**/dist/
 **/*.spec
 **/venv
-**/env
-**/bin
 **/temp
 **/*.pyperf
 **/.vscode
 **/*.user
-**/*.egg-info
