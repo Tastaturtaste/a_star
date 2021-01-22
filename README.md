@@ -1,6 +1,5 @@
-# A*-Mazesolver
-This is my attempt at solving mazes with an A*-Algorithm using a combination of c++ and python.
-
+# A* Python Extension Module
+A c++ extension module for python, implementing a a*-algorithm, to learn how to make c++ python extensions and package them.
 
 
 ## Building
@@ -10,6 +9,11 @@ Activate it using ```venv-name/scripts/activate```.
 Read more about it [here](https://docs.python.org/3/tutorial/venv.html).
 
 ### Required
-For this step a compatible c++-compiler is likely necessary, since the c++-binary extension has to interact with the python interpreter. Linux users should have one by default while windows users may have to install one. But first proceed as follows.
-In the root directory run ```python make_dist.py```. This will build a wheel and a sdist.
+In the root directory run ```python make_dist.py```. This will build a wheel and a sdist and store them in ./dist/.
 If you did not have the correct compiler installed at this stage the generated error message will tell you which compiler you need and where you can get one.
+
+## Usage
+Installing this module requires either a c++-compiler or a platform compatible with the provided wheel distribution.  
+Installation with pip should be possible after downloading the ```./dist``` subdirectory with  
+```pip install --find-links=relative/path/to/downloaded/dist a_star```.  
+A example usage of this module can be seen in the project [mazesolve](https://github.com/Tastaturtaste/mazesolver). 
