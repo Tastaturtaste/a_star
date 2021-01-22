@@ -1,7 +1,7 @@
 Metadata-Version: 1.0
 Name: a-star
 Version: 0.0.1
-Summary: A module which exports one function, get_path, to get a optimal path between to positions
+Summary: A module which exports one function, get_path, to get a optimal path between to positions using a a*-implementation in c++.
 Home-page: UNKNOWN
 Author: Joshua Möllers
 Author-email: UNKNOWN

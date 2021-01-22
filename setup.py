@@ -20,7 +20,7 @@ __version__ = "0.0.1"
 ext_modules = [
     Pybind11Extension("a_star",
         ["src/a_star/a_star.cpp"],
-        include_dirs=["src/a_star","src/a_star/util/"],
+        include_dirs=["src/a_star/","src/a_star/util/"],
         cxx_std=17,
         # Example: passing in the version to the compiled code
         define_macros = [('VERSION_INFO', __version__)],
@@ -31,7 +31,7 @@ setup(
     name="a_star",
     version=__version__,
     author="Joshua Möllers",
-    description="A module which exports one function, get_path, to get a optimal path between to positions",
+    description="A module which exports one function, get_path, to get a optimal path between to positions using a a*-implementation in c++.",
     long_description="",
     ext_modules=ext_modules,
     # Currently, build_ext only provides an optional "highest supported C++
