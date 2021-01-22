@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "mazesolve", "example\mazesolve\mazesolve.pyproj", "{2C3BC3C4-1193-4C9E-B478-5BC153DCD779}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "a_star", "src\a_star\a_star.vcxproj", "{4A7CF6C7-7F46-4BC4-A1DF-BA49D0D64272}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C3BC3C4-1193-4C9E-B478-5BC153DCD779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C3BC3C4-1193-4C9E-B478-5BC153DCD779}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2C3BC3C4-1193-4C9E-B478-5BC153DCD779}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C3BC3C4-1193-4C9E-B478-5BC153DCD779}.Release|x64.ActiveCfg = Release|Any CPU
+		{4A7CF6C7-7F46-4BC4-A1DF-BA49D0D64272}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{4A7CF6C7-7F46-4BC4-A1DF-BA49D0D64272}.Debug|x64.ActiveCfg = Debug|x64
+		{4A7CF6C7-7F46-4BC4-A1DF-BA49D0D64272}.Debug|x64.Build.0 = Debug|x64
+		{4A7CF6C7-7F46-4BC4-A1DF-BA49D0D64272}.Release|Any CPU.ActiveCfg = Release|Win32
+		{4A7CF6C7-7F46-4BC4-A1DF-BA49D0D64272}.Release|x64.ActiveCfg = Release|x64
+		{4A7CF6C7-7F46-4BC4-A1DF-BA49D0D64272}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {20694611-66B6-41A9-BAF3-E463B358FD8F}
+	EndGlobalSection
+EndGlobal
