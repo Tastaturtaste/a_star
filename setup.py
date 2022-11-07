@@ -6,7 +6,7 @@ from pybind11 import get_cmake_dir
 
 import sys
 
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 
 # The main interface is through Pybind11Extension.
 # * You can add cxx_std=11/14/17, and then build_ext can be removed.
@@ -31,7 +31,7 @@ setup(
     name="a_star",
     version=__version__,
     author="Joshua Möllers",
-    description="A module which exports one function, get_path, to get a optimal path between to positions using a a*-implementation in c++.",
+    description="A module which exports one function, get_path, to get a optimal path between two positions using a a*-implementation in c++.",
     long_description="",
     ext_modules=ext_modules,
     # Currently, build_ext only provides an optional "highest supported C++

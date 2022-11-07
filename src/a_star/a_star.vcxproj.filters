@@ -18,20 +18,11 @@
     <ClInclude Include="util\Timer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\a_star.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\util\Timer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="a_star.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\a_star.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="a_star.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

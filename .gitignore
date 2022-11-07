@@ -7,3 +7,6 @@
 **/*.pyperf
 **/.vscode
 **/*.user
+dist/
+**/$*/
+*.egg-info/

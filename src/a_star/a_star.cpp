@@ -66,19 +66,7 @@ std::pair<int, int> pos_from_index(int index, int width) {
 	return { index % width, index / width };
 }
 
-template<class Container >
-std::unordered_set<index_t> vec_to_set(Container const & vec) {
-	std::unordered_set<index_t> set;
-	set.reserve(vec.size() / 4);
-	for (size_t i = 0; i < vec.size(); ++i) {
-		if (vec[i]) {
-			set.insert(i);
-		}
-	}
-	return set;
-}
-
-std::vector<index_t> construct_path(Node const* const start, Node const* const exit, size_t approx_path_length = 1) {
+std::vector<index_t> construct_path(Node const* const start, Node const* const exit, size_t approx_path_length) {
 	// Beginning with the start Node traverses through the Node pointers and adds the indices to the path
 	// Expects every Node to point to the following Node in the path
 	std::vector<index_t> path{ start->index };
@@ -130,13 +118,13 @@ std::tuple<std::vector<index_t>, std::unordered_set<index_t>> get_path(int width
 	auto cmp = [](Node const* l, Node const* r) { return *l < *r; };
 	std::set<Node const*, decltype(cmp)> openlist(std::move(cmp));
 	std::unordered_set<index_t> closedlist{};
-	closedlist.reserve(costs.size() / 2);
+	closedlist.reserve(costs.size());
 	openlist.insert( &(node_map[start_index]) );
 	while (	!openlist.empty() ){
 		Node const* const current = *(openlist.begin());
 		if (current == exit_node) {
 			// call with exit and start switched to get correct direction back
-			return { construct_path(exit_node, start_node, width*height/4) , closedlist };
+			return { construct_path(exit_node, start_node, width*height) , closedlist };
 		}
 		openlist.erase(openlist.begin());
 		closedlist.insert(current->index);
@@ -158,7 +146,7 @@ std::tuple<std::vector<index_t>, std::unordered_set<index_t>> get_path(int width
 				if (costs[neighbor.index] < 0.0)
 					continue;
 				const bool diagonal_move = dx * dy != 0; // should be inlined
-				double new_sure_cost = current->sure_cost + (diagonal_move ? diag_cost_mod : 1.0) * costs[neighbor.index];
+				double new_sure_cost = current->sure_cost + (diagonal_move ? diag_cost_mod : 1.0) + costs[neighbor.index];
 				if (new_sure_cost < neighbor.sure_cost) {
 					// Make sure to not invalidate the ordered set
 					if (auto it = openlist.find(&neighbor); it != openlist.end())
